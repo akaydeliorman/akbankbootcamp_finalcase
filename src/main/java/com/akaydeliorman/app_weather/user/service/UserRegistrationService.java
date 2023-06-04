@@ -22,7 +22,7 @@ public class UserRegistrationService {
         User user = new User();
         user.setLogin(login);
         user.setPassword(bCryptPasswordEncoder.encode(password));
-        user.setEnumRole(EnumRole.USER);
+        user.setEnumRole(EnumRole.ROLE_USER);
 
         return this.userService.createUser(user);
     }

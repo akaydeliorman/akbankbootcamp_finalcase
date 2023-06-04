@@ -26,7 +26,6 @@ public class SecurityConfig {
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/api/v1/auth/**",
-                        "/api/v1/weather/**",
                         "/swagger-ui/**",
                         "/configuration/ui",
                         "/swagger-resources/",
@@ -34,6 +33,7 @@ public class SecurityConfig {
                         "/webjars/",
                         "/v3/api-docs/**")
                 .permitAll()
+                .requestMatchers("/api/v1/weather/**").hasAnyRole("USER")
                 .anyRequest()
                 .authenticated()
                 .and()

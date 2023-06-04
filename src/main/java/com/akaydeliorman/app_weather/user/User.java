@@ -25,13 +25,14 @@ public class User implements UserDetails {
 
     private String password;
 
+    private List<String> savedCities;
+
     @Enumerated(EnumType.STRING)
     private EnumRole enumRole;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(enumRole.name()));
     }
-
 
     @Override
     public String getUsername() {
@@ -56,5 +57,10 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String getPassword(){
+        return password;
     }
 }
