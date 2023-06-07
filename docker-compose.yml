@@ -1,0 +1,27 @@
+services:
+  kafka:
+    container_name: kafka-akbank
+    image: bashj79/kafka-kraft
+    ports:
+      - "9092:9092"
+    volumes: 
+      - kafka_data:/opt/kafka/kafka-logs
+volumes:
+  kafka_data:
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: http://localhost:9092/
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      spring:
+        kafka:
+          consumer:
+            properties:
+              spring.json.trusted.packages: "com.akaydeliorman.*"
+            auto-offset-reset: earliest
+            bootstrap-servers: localhost:9092
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      server:
+        port: 8081

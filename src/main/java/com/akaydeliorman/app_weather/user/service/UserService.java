@@ -1,35 +1,48 @@
 package com.akaydeliorman.app_weather.user.service;
 
+import com.akaydeliorman.app_weather.kafkaservice.producer.KafkaService;
 import com.akaydeliorman.app_weather.openweathermap.WeatherDataResponse;
 import com.akaydeliorman.app_weather.openweathermap.service.WeatherService;
 import com.akaydeliorman.app_weather.user.User;
+import com.akaydeliorman.app_weather.user.dto.UpdateDto;
+import com.akaydeliorman.app_weather.user.dto.UserDto;
+import com.akaydeliorman.app_weather.user.mapper.UserMapper;
 import com.akaydeliorman.app_weather.user.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import java.util.NoSuchElementException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
+
 public class UserService {
     private UserRepository userRepository;
 
     private final WeatherService weatherService;
+    private final KafkaService kafkaService;
 
-    public UserService(UserRepository userRepository, WeatherService weatherService) {
+    private final UserMapper userMapper;
+
+    public UserService(UserRepository userRepository, WeatherService weatherService, KafkaService kafkaService, UserMapper userMapper) {
         this.userRepository = userRepository;
         this.weatherService = weatherService;
+        this.kafkaService = kafkaService;
+        this.userMapper = userMapper;
     }
+
 
     public User createUser(User user) {
         return this.userRepository.save(user);
     }
 
-    public User getUserLogin(String login) {return this.userRepository.findByLogin(login).orElseThrow();}
+    public User getUserLogin(String login) {
+        return this.userRepository.findByLogin(login)
+                .orElseThrow(() -> new NoSuchElementException("User not found"));
+    }
+
 
     public void deleteUserLogin(String login) {
+        kafkaService.sendMessage("DELETED!","topics");
         User user = getUserLogin(login);
         deleteUser(user);
     }
@@ -65,5 +78,12 @@ public class UserService {
     }
     public void deleteUser(User user) {
         this.userRepository.delete(user);
+    }
+
+    public UserDto update(String login, UpdateDto updateDto){
+        User user = userRepository.findByLogin(login).orElseThrow();
+        user.setLogin(updateDto.getUsername());
+        userRepository.save(user);
+        return userMapper.userToDto(user);
     }
 }
