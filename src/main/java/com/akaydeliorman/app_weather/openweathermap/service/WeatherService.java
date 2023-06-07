@@ -21,18 +21,7 @@ public class WeatherService {
     }
 
     public WeatherDataResponse getWeather(String q) {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        try {
-            WeatherDataResponse responseData = objectMapper.readValue(feignClient.weatherData(q, apiKey, "metric"),WeatherDataResponse.class);
-
-            return responseData;
-        } catch (
-                JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-
+        return feignClient.weatherData(q,apiKey,"metric");
     }
 
 }

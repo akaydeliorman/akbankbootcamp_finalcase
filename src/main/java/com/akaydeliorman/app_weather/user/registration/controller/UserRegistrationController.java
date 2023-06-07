@@ -37,9 +37,9 @@ public class UserRegistrationController {
     private final KafkaService kafkaService;
 
     @PostMapping("/app-user")
-    public GenericApiResponse createServiceProviderOrganizationAdminUser(@RequestBody RegistrationDto userRegistrationDto) {
+    public GenericApiResponse createServiceProviderOrganizationAdminUser(@RequestBody AuthenticationRequest authenticationRequest) {
         kafkaService.sendMessage("Created user.","info-topics");
-        User user = userRegistrationService.registerAppUser(userRegistrationDto.getLogin(), userRegistrationDto.getPassword());
+        User user = userRegistrationService.registerAppUser(authenticationRequest);
         return new GenericApiResponse(200, "Success", "49157368", user);
     }
 

@@ -86,22 +86,29 @@ class UserServiceTest {
 
     @Test
     void getSavedWeatherCities_ShouldReturnWeatherDataForSavedCities() {
+        
+        String username = "username";
         User user = new User();
         user.setSavedCities(List.of("city1", "city2"));
+        when(userRepository.findByLogin(anyString())).thenReturn(Optional.of(user));
 
-        WeatherDataResponse weatherData1 = new WeatherDataResponse();
-        WeatherDataResponse weatherData2 = new WeatherDataResponse();
-        when(weatherService.getWeather(anyString())).thenReturn(weatherData1, weatherData2);
+        WeatherDataResponse weatherDTO1 = new WeatherDataResponse();
+        WeatherDataResponse weatherDTO2 = new WeatherDataResponse();
+        when(weatherService.getWeather("city1")).thenReturn(weatherDTO1);
+        when(weatherService.getWeather("city2")).thenReturn(weatherDTO2);
 
-        Map<String, WeatherDataResponse> expectedCitiesData = new HashMap<>();
-        expectedCitiesData.put("city1", weatherData1);
-        expectedCitiesData.put("city2", weatherData2);
 
-        Map<String, WeatherDataResponse> citiesData = userService.getSavedWeatherCities("login");
+        Map<String, WeatherDataResponse> result = userService.getSavedWeatherCities(username);
 
-        verify(userRepository, times(1)).findByLogin("login");
-        verify(weatherService, times(2)).getWeather(anyString());
-        assertEquals(expectedCitiesData, citiesData);
+
+        Map<String, WeatherDataResponse> expectedData = new HashMap<>();
+        expectedData.put("city1", weatherDTO1);
+        expectedData.put("city2", weatherDTO2);
+
+        assertEquals(expectedData, result);
+        verify(userRepository, times(1)).findByLogin(username);
+        verify(weatherService, times(1)).getWeather("city1");
+        verify(weatherService, times(1)).getWeather("city2");
     }
 
     @Test

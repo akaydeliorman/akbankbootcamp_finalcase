@@ -17,16 +17,15 @@ public class UserRegistrationService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    public User registerAppUser(String login, String password){
-
-        User user = new User();
-        user.setLogin(login);
-        user.setPassword(bCryptPasswordEncoder.encode(password));
+    public User registerAppUser(AuthenticationRequest authenticationRequest){
+        User user = createValidUser(authenticationRequest);
+        user.setLogin(user.getLogin());
+        user.setPassword(bCryptPasswordEncoder.encode(authenticationRequest.getPassword()));
         user.setEnumRole(EnumRole.ROLE_USER);
 
         return this.userService.createUser(user);
     }
-    private User createValidUser(AuthenticationRequest authRequestDto) {
+    public User createValidUser(AuthenticationRequest authRequestDto) {
         User user = new User();
         user.setLogin(authRequestDto.getLogin());
         user.setPassword(bCryptPasswordEncoder.encode(authRequestDto.getPassword()));

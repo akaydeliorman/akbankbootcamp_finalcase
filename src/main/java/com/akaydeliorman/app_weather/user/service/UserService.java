@@ -70,7 +70,7 @@ public class UserService {
 
     public User deleteCityFromUser(String login, String city) {
         User user = getUserLogin(login);
-        List<String> cities = user.getSavedCities();
+        List<String> cities = new ArrayList<>(user.getSavedCities());
         cities.remove(city);
         user.setSavedCities(cities);
         userRepository.save(user);
