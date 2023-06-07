@@ -82,7 +82,7 @@ public class UserController {
             return new GenericApiResponse(200, "Success", "879721", response);
         }
         catch (Exception e){
-            throw new SavedCitiesNotFoundException("Cities not found!!");
+            throw new UserNotFoundException("User not found!!");
         }
     }
 
@@ -106,7 +106,7 @@ public class UserController {
             return new GenericApiResponse(200, "Success", "45678312", response);
         }
         catch (Exception e){
-            throw new CityNotFoundException("City not found!!");
+            throw new UserNotFoundException("User not found!!");
         }
     }
 
