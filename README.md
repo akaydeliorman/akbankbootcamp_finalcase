@@ -23,31 +23,31 @@ Forecasts are obtained in 3-hour intervals covering a period of 5 days. The appl
 
 ## Swagger Screenshots
 ### Controller
-![swagger1](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/9cf4d2df-4941-4ff2-b62b-2736f6fc69db)
+![swagger1](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/82af8246-bbe7-4dc8-8bda-dd7a255d7f47)
 ### Register User
-![Ekran görüntüsü 2023-06-08 214020](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/a0c6623e-7774-4e3a-a8f7-1a103232c758)
-![Ekran görüntüsü 2023-06-08 214033](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/8cd17ce6-fefb-4552-b482-82a360fd4020)
+![Done-r](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/e062bccc-fa2f-49d4-a81f-b1d712b16853)
+![Ekran görüntüsü 2023-06-08 214033](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/f8bbd703-3073-45aa-a161-3a73bc8b13d3)
 ### Incorrect Login Authenticate
-![Ekran görüntüsü 2023-06-08 214310](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/8c35fe96-2ec4-433d-82b1-01b4e74afaba)
-![Ekran görüntüsü 2023-06-08 214513](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/e90e8265-8cfa-4d2f-b9b6-6d679515c0ce)
+![Ekran görüntüsü 2023-06-08 214310](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/057f5834-13f0-4831-9495-a51bbcc8140a)
+![Ekran görüntüsü 2023-06-08 214513](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/64854cb9-42fa-486f-af65-5c28eb8fbdc0)
 ### Correct Login Authenticate
-![Ekran görüntüsü 2023-06-08 214624](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/b52afbe4-9c5c-4320-b629-5abea33f7799)
-![Ekran görüntüsü 2023-06-08 214751](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/63bcf7b8-efd1-47da-a646-836cedf5ff20)
+![Ekran görüntüsü 2023-06-09 151930](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/51c70c5a-5339-4414-bcba-b72544d7048c)
+![Ekran görüntüsü 2023-06-08 214751](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/12c47594-c801-439e-b605-9e1ef9c1b13b)
 ### JWT
-![auth](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/58c4a3cd-27cf-4645-8b9a-2abdcfdf3607)
+![auth](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/1053f460-7f70-44b8-876b-55865d34c8fc)
 ### Get User
-![Ekran görüntüsü 2023-06-08 215348](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/718a23a0-3fcc-46f1-b8d9-d1df04f9f16a)
-![Ekran görüntüsü 2023-06-08 213436](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/93f98fc9-8176-4214-87aa-5c7ded66c916)
+![Ekran görüntüsü 2023-06-08 215348](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/8ebf849c-6a55-4288-a9b5-ee2b828c0a4b)
+![Doonekran görüntüsü 2023-06-08 213436](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/96149c6d-fc33-4816-89ca-5d53cebcb858)
 ### Get User and Saved City Weather
-![Ekran görüntüsü 2023-06-08 213403](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/f4e9a47a-b370-46c1-a475-f17067c377a1)
-![Ekran görüntüsü 2023-06-08 213422](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/ad13b30f-f7ce-4a4d-bf10-a04e903bc8ea)
+![Ekran görüntüsü 2023-06-08 213403](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/bd11afa7-bc07-4888-8efb-c812f7f7ed77)
+![Ekran görüntüsü 2023-06-08 213422](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/11b1d05f-906c-4391-b623-53a9a40bec7f)
 ### Get City Weather
-![Ekran görüntüsü 2023-06-08 215440](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/2ff9769d-e0b9-4d43-8fda-941935cff6a0)
-![Ekran görüntüsü 2023-06-08 215457](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/caf36c46-7137-4ea2-96a1-6c3508a45e60)
+![Ekran görüntüsü 2023-06-08 215440](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/16c69701-0694-47b4-8eba-109ac10b1f62)
+![Ekran görüntüsü 2023-06-08 215457](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/de5d0f36-90bf-4c02-9ae2-55c2fcb952ad)
 ### Kafka Log Info
-![Ekran görüntüsü 2023-06-08 213506](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/b8816cb1-ca7d-4ff2-91da-320fa3f845a6)
-![Ekran görüntüsü 2023-06-08 213520](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/bf61ac53-88d4-4131-9069-9a71d0e9f0bd)
-![authLog](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/2e347f88-59aa-46dc-afd8-a07136cc4963)
+![authLog](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/396f8f32-f316-44fd-a000-bbbedaec3a69)
+![Ekran görüntüsü 2023-06-08 213506](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/8b8e4688-4400-44ba-8062-7406bcaf92cf)
+![Ekran görüntüsü 2023-06-08 213520](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/37aca83b-028f-4ee1-b68b-2ead2eb0cf70)
 ### Test
-![Ekran görüntüsü 2023-06-08 213642](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/c0208773-e337-436a-bf6f-99f4f4b320db)
+![Ekran görüntüsü 2023-06-08 213642](https://github.com/akaydeliorman/akbankbootcamp_finalcase/assets/101337533/d90e71c0-612e-420c-8aea-3e8049d3d69f)
 
